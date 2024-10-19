@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de inscrição</title>
+    <link rel="stylesheet" href="public/css/global.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+  </head>
+  <body>
+    <form onsubmit="return send()" id="form-inscricao">
+      <label for="user-input">Digite seu nome:</label>
+      <input
+        type="text"
+        name="nome"
+        placeholder="Nome"
+        required
+        id="user-input"
+      />
+      <label for="email-input">Digite seu email:</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        id="email-input"
+        required
+      />
+      <label for="tele-input">Digite seu telefone</label>
+      <input
+        type="tel"
+        name="telefone"
+        placeholder="11 9xxxx-xxxx"
+        required
+        id="tele-input"
+        pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}"
+      />
+      <label for="nasc-input">Data de nascimento:</label>
+      <input type="date" required name="nasc" id="nasc-input" />
+      <section class="genero">
+        <label for="genero-input-masc">Masculino</label>
+        <input type="radio" name="genero" required id="genero-input-masc" />
+        <label for="genero-input-fem">Feminino</label>
+        <input type="radio" name="genero" required id="genero-input-fem" />
+      </section>
+      <label for="tipo-inscricao-input"
+        >Selecione o tipo da sua inscricao:</label
+      >
+      <select name="tipo-inscricao" required id="tipo-inscricao-input">
+        <option value="">Selecione:</option>
+        <option value="pale">Palestrante</option>
+        <option value="volu">Voluntario</option>
+        <option value="part">Participante</option>
+      </select>
+      <label for="mensagem-input">Digite sua mensagem:</label>
+      <textarea
+        required
+        style="resize: none; width: 60%; height: 40%"
+        name="mensagem"
+        id="mensagem-input"
+        form="form-inscricao"
+        maxlength="200"
+      ></textarea>
+      <div class="buttons">
+        <input
+          type="submit"
+          class="btn"
+          id="submit-input"
+          value="Inscrever-se"
+        />
+        <button id="clear-button" class="btn red">Limpar formulario</button>
+      </div>
+    </form>
+    <script src="public/js/app.js"></script>
+  </body>
+</html>

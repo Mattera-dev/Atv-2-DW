@@ -1,0 +1,21 @@
+:root {
+
+    --bg-primary: #440d75;
+    --text-primary: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    text-decoration: none;
+}
